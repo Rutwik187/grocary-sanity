@@ -48,6 +48,7 @@ const Product = ({ product }) => {
       <div className="flex flex-col justify-between h-full">
         <Link href={`/product/${product.slug.current}`}>
           <img
+            className="w-[16rem] h-[16rem] object-contain m-2"
             width={500}
             height={500}
             src={urlFor(product.image[0]).url()}
