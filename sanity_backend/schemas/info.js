@@ -72,6 +72,15 @@ export default {
             validation: Rule => Rule.required(),
         },
         {
+            name: 'payQR',
+            title: 'Payment QR',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+
+        },
+        {
             name: 'addressUrl',
             title: 'Google Maps Url',
             type: "url"
