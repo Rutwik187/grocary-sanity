@@ -103,7 +103,10 @@ export default function CheckoutModal({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px]rounded-2xl sm:w-[600px]">
+        <Box
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-full rounded-2xl sm:w-[600px]"
+          sx={{ overflow: "scroll" }}
+        >
           <div className="bg-gray-100 rounded-xl px-8">
             <div className="container mx-auto py-8">
               <h1 className="text-2xl font-bold mb-6 text-center">
