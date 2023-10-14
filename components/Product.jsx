@@ -51,7 +51,7 @@ const Product = ({ product }) => {
             className="w-[16rem] h-[16rem] object-contain m-2"
             width={500}
             height={500}
-            src={urlFor(product.image[0]).url()}
+            src={product.image.length > 0 ? urlFor(product.image[0]).url() : ""}
             alt={product.name}
           />
         </Link>
