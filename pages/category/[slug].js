@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
@@ -55,7 +56,7 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getServerSideProps = async ({ params: { slug } }) => {
     const category = `*[_type == "category" && slug.current == '${slug}'][0]`
     const categoryData = await client.fetch(category)
     const query = `*[_type == "product" && category._ref == '${categoryData._id}']`;

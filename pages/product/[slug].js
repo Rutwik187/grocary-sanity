@@ -165,7 +165,7 @@ const ProductDetails = ({ product, products, infoData, categories }) => {
   )
 }
 
-export const getStaticPaths = async () => {
+export const getServerSideProps = async () => {
   const query = `*[_type == "product"] {
     slug {
       current
