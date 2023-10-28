@@ -4,6 +4,7 @@ import { urlFor } from "../lib/client";
 
 import Modal from "@mui/material/Modal";
 import { useSelector } from "react-redux";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function CheckoutModal({
   coupon,
@@ -104,10 +105,14 @@ export default function CheckoutModal({
         aria-describedby="modal-modal-description"
       >
         <Box
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-full rounded-2xl sm:w-[600px]"
+          className="absolute left-1/2 transform -translate-x-1/2 pt-20 w-[400px] h-full rounded-2xl sm:w-[600px] scrollbar-hide"
           sx={{ overflow: "scroll" }}
         >
           <div className="bg-gray-100 rounded-xl px-8">
+            <AiOutlineCloseCircle
+              className="w-16 h-16 absolute right-0 p-2 cursor-pointer"
+              onClick={handleClose}
+            />
             <div className="container mx-auto py-8">
               <h1 className="text-2xl font-bold mb-6 text-center">
                 Checkout Form

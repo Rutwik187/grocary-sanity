@@ -1,4 +1,5 @@
 import { BiInfoCircle } from "react-icons/bi";
+import blockContent from "./blockContent";
 
 export default {
     name: "info",
@@ -100,6 +101,11 @@ export default {
             name: 'embedMap',
             title: 'Embed Map in contact us [copy from only https.;. before width...',
             type: 'url'
+        },
+        {
+            name: 'termsAndConditions',
+            title: 'Terms and Conditions',
+            type: 'blockContent',
         }
 
 
