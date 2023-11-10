@@ -118,7 +118,7 @@ export default function CheckoutModal({
                 Checkout Form
               </h1>
               <div>
-                <form className="w-full mx-auto bg-white p-8 rounded-md shadow-md flex flex-col sm:flex-row gap-4 sm:gap-8">
+                <form className="w-full mx-auto bg-white p-8 rounded-md shadow-md flex flex-col  gap-4 sm:gap-8">
                   <div className="w-60">
                     <div className="mb-4">
                       <label
@@ -178,9 +178,15 @@ export default function CheckoutModal({
                   </div>
 
                   <img
-                    src={info[0] ? urlFor(info[0].payQR).url() : ""}
+                    src={
+                      info[0]
+                        ? info[0].payQR
+                          ? urlFor(info[0].payQR).url()
+                          : ""
+                        : ""
+                    }
                     alt="Payment QR"
-                    className="object-contain"
+                    className="object-contain max-w-100"
                   />
                 </form>
                 <div className="mb-4 mt-4">
